@@ -5,9 +5,40 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    name: 'CoderWhy',
+    age: 18,
+    students: [{
+        id: 110,
+        name: 'kobo',
+        age: 20
+      },
+      {
+        id: 120,
+        name: 'hebi',
+        age: 21
+      },
+      {
+        id: 130,
+        name: 'nabo',
+        age: 22
+      }
+    ],
+    counter: 0
   },
+  func1() {
 
+    this.setData({
+      counter: this.data.counter + 1
+    })
+    console.log("按钮点击")
+  },
+  func2() {
+
+    this.setData({
+      counter: this.data.counter - 1
+    })
+    console.log("按钮减号")
+  },
   /**
    * 生命周期函数--监听页面加载
    */

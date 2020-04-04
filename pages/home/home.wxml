@@ -1,4 +1,10 @@
 <!--pages/home/home.wxml-->
-<text class='title'>hello World</text>
-<button size="mini">按钮</button>
-<view>haha</view>
+<!--  -->
+<view>Hello {{name}}</view>
+<view>我的年龄：{{age+10}}</view>
+
+<view wx:for="{{students}}">{{item.name}}--{{item.age}}</view>
+<!-- 事件监听 -->
+<view>当前计数：{{counter}}</view>
+<button size="mini" bindtap="func1">++</button>
+<button size="mini" bindtap="func2">--</button>
