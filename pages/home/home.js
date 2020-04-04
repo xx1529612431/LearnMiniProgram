@@ -26,14 +26,12 @@ Page({
     counter: 0
   },
   func1() {
-
     this.setData({
       counter: this.data.counter + 1
     })
     console.log("按钮点击")
   },
   func2() {
-
     this.setData({
       counter: this.data.counter - 1
     })
