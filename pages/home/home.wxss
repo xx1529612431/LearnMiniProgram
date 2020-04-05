@@ -1,5 +1,28 @@
 /* pages/home/home.wxss */
-.title{
-  color:  red;
+.title {
+  color: red;
   font-size: 30px;
+}
+
+.item1 {
+  background: red;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  display: inline-block;
+}
+.item2 {
+  background: green;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+
+.container1 {
+  white-space: nowrap;
+}
+.container2 {
+  height: 200px;
+  white-space: nowrap;
+  margin-top: 20px;
 }
