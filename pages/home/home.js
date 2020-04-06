@@ -9,7 +9,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    response: null,
     fileId: '',
     filePath: "",
     tempImg: [],
@@ -18,10 +17,9 @@ Page({
 
 
   showPhoto() {
-    var i = Math.floor(Math.random() * this.data.response.data.length);
-    var j = Math.floor(Math.random() * this.data.response.data[i].fileIDs.length);
+    var i = Math.floor(Math.random() * this.data.fileIDs.length);
     this.setData({
-      fileId: this.data.response.data[i].fileIDs[j]
+      fileId: this.data.fileIDs[i]
     })
     wx.showLoading({
       title: '下载中',
@@ -35,10 +33,10 @@ Page({
           filePath: res.tempFilePath
         })
       },
-      fail: err=>{
+      fail: err => {
         wx.hideLoading()
         wx.showToast({
-          title: err,
+          title: err
         })
       }
     })
@@ -49,9 +47,11 @@ Page({
    */
   onLoad: function (options) {
     c.get().then(res => {
-      this.setData({
-        response: res
-      })
+      for (var i = 0; i < res.data.length; i++) {
+        for (var j = 0; j < res.data[i].fileIDs.length; j++) {
+          this.data.fileIDs.push(res.data[i].fileIDs[j])
+        }
+      }
     })
   },
 
