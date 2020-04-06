@@ -1,4 +1,4 @@
 <!--pages/home/home.wxml-->
 
-<button bindtap="showPhoto">来一张色图</button>
+<button bindtap="showPhoto">来一张图片</button>
 <image show-menu-by-longpress mode="widthFix" src="{{filePath}}" lazy-load />
