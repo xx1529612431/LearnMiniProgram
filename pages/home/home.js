@@ -35,7 +35,12 @@ Page({
           filePath: res.tempFilePath
         })
       },
-      fail: console.error
+      fail: err=>{
+        wx.hideLoading()
+        wx.showToast({
+          title: err,
+        })
+      }
     })
   },
 

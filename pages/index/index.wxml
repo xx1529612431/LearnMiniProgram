@@ -2,7 +2,7 @@
 <view class="container">
 
 <button bindtap="uploadImgHandle">选择图片</button>
-<button bindtap="submit">提交图片</button>
+<button bindtap="submit" hidden>上传图片</button>
 <!-- 事件监听 -->
 <block wx:for='{{tempImg}}'>
 	<image show-menu-by-longpress mode="widthFix" src="{{item}}" lazy-load />
